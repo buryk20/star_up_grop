@@ -1,0 +1,344 @@
+body {
+    background-color: $colorGrey;
+    font-family: $font;
+}
+
+.header {
+    background-color: $colorWhite;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    &__wrp {
+    max-width: 1364px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include text(18px, 500, $colorDark);
+    }
+    &__nav-wrp {
+        max-width: 900px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__lang-wrp {
+        max-width: 176px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.nav-item:hover {
+    color: $colorMain;
+    cursor: pointer;
+}
+
+.lang-item:hover {
+    color: $colorMain;
+    cursor: pointer;
+}
+
+.nav-list-active,
+.lang-item-active {
+    color: $colorMain;
+}
+
+.main-idea {
+    margin-bottom: 24px;
+    background-image: url(../img/idea_bg.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: contain;
+        
+    &__wrp{
+        max-width: 1364px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+        min-height: 760px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__text {
+        max-width: 640px;
+        width: 100%;
+    }
+    &__title {
+        @include text(38px, 700, $colorWhite);
+        margin-bottom: 56px;
+        text-transform: uppercase;
+    }
+    &__description {
+        @include text(24px, 400, $colorWhite);
+    }
+    &__img-wrp {
+        padding-top: 65px;
+    }
+}
+
+.main-request {
+    height: 573px;
+    background-image: url(../img/polygon_13.png);
+    background-repeat: no-repeat;
+    background-position: right 0% top 42%;
+
+    &__wrp {
+        max-width: 1364px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img-wrp {
+        margin-right: 32px;
+    }
+    &__text {
+        max-width: 687px;
+        width: 100%;
+    }
+    &__title {
+        @include text(28px, 600, #383737);
+        margin-bottom: 38px;
+    }
+    &__description {
+        @include text(24px, 400, $colorBlack);
+        margin-bottom: 72px;
+    }
+    &__button-wrp {
+        display: flex;
+    }
+    &__button-request {
+        @include button($colorWhite, $colorMain);
+        margin-right: 32px;
+        padding: 23px 50px;
+        text-transform: uppercase;
+        letter-spacing: 0.005em;
+        transition: .3s, ease;
+        &:hover {
+            background-color: $colorHoverButton;
+            transition: .3s, ease;
+        }
+    }
+    &__button-contacts {
+        @include button($colorMain, transparent);
+        border: 3px solid $colorMain;
+        padding: 23px 87px;
+        text-transform: uppercase;
+        letter-spacing: 0.005em;
+        transition: .3s, ease;
+        &:hover {
+            background-color: $colorHoverButton;
+            color: $colorWhite;
+            border-color: $colorHoverButton;
+            transition: .3s, ease;
+        }
+    }
+}
+
+.main-offer {
+
+    &__wrp {
+        max-width: 1364px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__title {
+        @include text(32px, 600, $colorBlack);
+        margin-bottom: 28px;
+    }
+    &__text {
+        @include text(24px, 400, $colorBlack);
+        margin-bottom: 54px;
+    }
+    &__list {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+    }
+    &__item {
+        max-width: 276px;
+        width: 100%;
+        height: 276px;
+        padding: 48px 0 0;
+        background: $colorWhite;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &__item-img {
+        align-self: center;
+        margin-bottom: 48px;
+    }
+    &__item-text {
+        max-width: 205px;
+        width: 100%;
+        @include text(18px, 500, $colorBlack);
+        text-transform: uppercase;
+    }
+    &__description{
+        max-width: 1200px;
+        width: 100%;
+        // height: 237px;
+        padding: 41px 103px;
+        border-radius: 8px;
+        background-color: $colorWhite;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &__description-text {
+        @include text(24px, 400, $colorBlack);
+        max-width: 994px;
+        width: 100%;
+    }
+}
+
+.main-purpose {
+    height: 573px;
+    margin-bottom: 92px;
+    padding-top: 92px;
+    background-image: url(../img/polygon_14.png);
+    background-repeat: no-repeat;
+    background-position: left 0% bottom 42%;
+
+    &__wrp {
+        max-width: 1364px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text {
+        max-width: 657px;
+        width: 100%;
+    }
+    &__title {
+        @include text(24px, 400, $colorBlack);
+        margin-bottom: 38px;
+    }
+    &__button-wrp {
+        display: flex;
+    }
+    &__button-order {
+        @include button($colorWhite, $colorMain);
+        margin-right: 32px;
+        padding: 23px 50px;
+        text-transform: uppercase;
+        letter-spacing: 0.005em;
+        transition: .3s, ease;
+        &:hover {
+            background-color: $colorHoverButton;
+            transition: .3s, ease;
+        }
+    }
+    &__button-about {
+        @include button($colorMain, transparent);
+        border: 3px solid $colorMain;
+        padding: 23px 87px;
+        text-transform: uppercase;
+        letter-spacing: 0.005em;
+        transition: .3s, ease;
+        &:hover {
+            background-color: $colorHoverButton;
+            color: $colorWhite;
+            border-color: $colorHoverButton;
+            transition: .3s, ease;
+        }
+    }
+}
+
+.main-realization {
+    height: 540px;
+    &__wrp {
+        max-width: 1364px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 3fr 1fr 3fr;
+        grid-row-gap: 116px;
+        align-items: center;
+    }
+    &__development-triangle {
+        background-image: url(../img/lightblue_triangle.svg);
+        background-repeat: no-repeat;
+        height: 134px;
+        width: 134px;
+        justify-self: center;
+    }
+    &__development-triangle-text {
+        @include text(24px, 700, $colorWhite);
+        letter-spacing: 0.07em;
+        height: 111px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__development-numer {
+        @include text(48px, 700, $colorDark);
+        justify-self: right;
+    }
+    &__development-text {
+        @include text(28px, 600, $colorDark);
+        justify-self: left;
+    }
+    &__content-text {
+        @include text(28px, 600, $colorDark);
+        justify-self: right;
+    }
+    &__content-triangle{
+        background-image: url(../img/green_triangle.svg);
+        background-repeat: no-repeat;
+        height: 134px;
+        width: 134px;
+        justify-self: right;
+        position: relative;
+        &::before {
+            content: 'Aa';
+            @include text(36px, 400, $colorWhite);
+            position: absolute;
+            right: 23px;
+            bottom: 18px;
+        }
+        &::after {
+            content: url(../icons/content_icon.svg);
+            position: absolute;
+            left: 50px;
+            top: 43px;
+        }
+    }
+    &__content-numer {
+        @include text(48px, 700, $colorDark);
+        justify-self: left;
+        padding-left: 64px;
+    }
+}
